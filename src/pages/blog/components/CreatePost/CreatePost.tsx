@@ -27,7 +27,7 @@ export default function CreatePost() {
     e.preventDefault()
 
     if (!editingPost) {
-      const formDataWithId = { ...formData, id: new Date().toISOString() }
+      const formDataWithId = { ...formData }
       dispath(addPost(formDataWithId))
     } else {
       dispath(finishEditPost(formData))
